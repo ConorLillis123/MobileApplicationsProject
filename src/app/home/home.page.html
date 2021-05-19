@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Provinces of Ireland
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+  <ul>
+    <!--turning words on main page into links to other pages-->
+    <li [routerLink] = "['/ulster']" routerDirection ="forward">Ulster</li>
+    <li [routerLink] = "['/munster']" routerDirection ="forward">Munster</li>
+    <li [routerLink] = "['/connaught']" routerDirection ="forward">Connacht</li>
+    <li [routerLink] = "['/leinster']" routerDirection ="forward">Leinster</li>
+  </ul>
+
+  <h2>European Countries</h2>
+  <!--iterating through arrays of countries-->
+  <ul>
+    <li *ngFor="let country of Countries">{{country.name}}, {{country.code}}</li>
+  </ul>
 </ion-content>
